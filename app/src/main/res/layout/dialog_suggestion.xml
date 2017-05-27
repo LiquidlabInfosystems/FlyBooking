@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonfocus" >
+
+        <com.travel.flybooking.support.CustomTextView
+            android:id="@+id/tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/theme_background"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="suggestion header"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/transparent_bg_theme_border"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/done"
+            android:textColor="@color/std_color" />
+    </RelativeLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/act_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="suggestion hint" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <com.travel.flybooking.support.CustomTextView
+        android:id="@+id/tv_no_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/no_match"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+</LinearLayout>
